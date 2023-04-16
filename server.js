@@ -17,11 +17,11 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/dream", async (req, res) => {
-
+    const prompt = req.body.prompt
     try {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
-            prompt: `create a 3 day itinerary for a group of people skiing in salt lake city`,
+            prompt: prompt,
             max_tokens: 2048,
             temperature: 0,
             
@@ -34,7 +34,7 @@ app.post("/dream", async (req, res) => {
     } catch (error) {
         return res.status(400).json({
             success: false,
-            error: 'error'
+            error: "error"
         })
     }
  
