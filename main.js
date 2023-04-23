@@ -17,7 +17,7 @@ submit.addEventListener("submit", async (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      prompt: `provide a detailed recommendation if ${string }is safe during pregnancy or breastfeeding. Please provide rationale. If it is not safe, please provide alternate recommendations. make it a numbered list`,
+      prompt: `provide a detailed recommendation if ${string }is safe during pregnancy or breastfeeding. Please provide rationale. If it is not safe, please provide alternate recommendations. make it a numbered list. explain like i am 5`,
     }),
   });
 
